@@ -16,7 +16,7 @@ const {user}=useSelector(store=>store.user);
 useEffect(()=>{
       
   if(user){
-    const socket=io('ws://localhost:8080',{
+    const socket=io('ws://devmedia-backend-2.onrender.com',{
         query:{
           userId:user?._id,
         }

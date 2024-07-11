@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { setAllUser } from '../redux/userSlice';
+import { USER_API_END_POINT } from '../utils/constant';
 
 export default function useGetAllUsers() {
  
@@ -11,7 +12,7 @@ const dispatch=useDispatch();
 
         const fetchOtherUsers = async()=>{
             try {
-                const res = await axios.get(`http://localhost:8080/api/v1/user/getAllUser`,{
+                const res = await axios.get(`https://devmedia-backend-2.onrender.com/api/v1/user/getAllUser`,{
                     headers:{
                       "Content-Type":"application/json"
                     },

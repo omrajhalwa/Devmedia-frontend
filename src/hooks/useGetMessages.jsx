@@ -16,7 +16,7 @@ export default function useGetMessages() {
         const fetchMessages = async ()=>{
 
           try {
-            const res=await axios.get(`http://localhost:8080/api/v1/message/${selectedUser?._id}`,{
+            const res=await axios.get(`https://devmedia-backend-2.onrender.com/api/v1/message/${selectedUser?._id}`,{
                     headers:{
                       "Content-Type":"application/json"
                     },
